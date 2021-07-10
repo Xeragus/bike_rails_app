@@ -1,0 +1,18 @@
+<table style="width:100%">
+  <tr>
+    <th>License Number</th>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Email</th>
+    <th>Processed at</th>
+  </tr>
+  <% @report[:processed_licenses].each do |license| %>
+    <tr>
+      <td><%= license.license_number %></td>
+      <td><%= license.name %></td>
+      <td><%= license.date_of_birth %></td>
+      <td><%= license.email %></td>
+      <td><%= license.created_at %></td>
+    </tr>
+  <% end %>
+</table>

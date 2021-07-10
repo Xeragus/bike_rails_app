@@ -29,3 +29,4 @@ gem 'rubocop', require: false
 gem 'csv'
 gem 'wkhtmltopdf-binary'
 gem 'wicked_pdf'
+gem 'whenever', require: false

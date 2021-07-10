@@ -9,6 +9,7 @@ module Parsers
         @file_path = file_path
       end
   
+      # TODO: Add validation
       def parse!
         data = []
         

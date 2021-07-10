@@ -9,4 +9,14 @@ class CompanyMailer < ApplicationMailer
   
     mail to: 'ba@test.com', subject: "Report on processed licenses submitted by #{@user.email}"
   end
+
+  def nightly_activity_report
+    @report = Generators::Reports::NightlyActivity.new.generate!
+    @content = "Attached to this mail you will find all licenses processed last night."
+
+    pdf = Generators::PDF::NightlyActivityReport.new(@report).generate!
+    attachments["nightly_activity_report_#{Date.today}.pdf"] = pdf
+
+    mail to: 'ba@test.com', subject: 'Nightly Activity Report'
+  end
 end
