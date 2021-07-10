@@ -12,13 +12,12 @@ module Parsers
       def parse!
         data = []
         
-        # This is the fastest way (as far as I know) to parse large CSV files
+        # This is the fastest way to parse large CSV files I know
         # For CSV file with 1 million rows (~ 75 MB) it takes around 10 sec and 0.58 MB
         ::CSV.foreach(@file_path, headers: true) do |row|
           data << {
             license_number: row['license_number'],
-            first_name: row['first_name'],
-            last_name: row['last_name'],
+            name: row['name'],
             email: row['email'],
             date_of_birth: row['date_of_birth']
           }

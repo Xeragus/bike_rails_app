@@ -7,22 +7,19 @@ RSpec.describe Parsers::LicensesFileParser do
     {
       :date_of_birth=>"1/18/1995",
       :email=>"joe.doe@test.com",
-      :first_name=>"Joe",
-      :last_name=>"Doe",
+      :name=>"Joe Doe",
       :license_number=>"335345435"
     },
     {
       :date_of_birth=>"3/27/1994",
       :email=>"mark.bark@test.com",
-      :first_name=>"Mark",
-      :last_name=>"Bark",
+      :name=>"Mark Bark",
       :license_number=>"234532453"
     },
     {
       :date_of_birth=>"9/12/1992",
       :email=>"tony.johnson@test.com",
-      :first_name=>"Tony",
-      :last_name=>"Johnson",
+      :name=>"Tony Johnson",
       :license_number=>"123234223"
     }
   ] }
