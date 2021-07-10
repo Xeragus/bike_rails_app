@@ -56,6 +56,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
     bcrypt (3.1.16)
     bootsnap (1.7.5)
@@ -79,6 +81,10 @@ GEM
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jwt (2.2.3)
+    launchy (2.5.0)
+      addressable (~> 2.7)
+    letter_opener (1.7.0)
+      launchy (~> 2.2)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -107,6 +113,7 @@ GEM
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
+    public_suffix (4.0.6)
     puma (4.3.8)
       nio4r (~> 2.0)
     racc (1.5.2)
@@ -194,6 +201,9 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wicked_pdf (2.1.0)
+      activesupport
+    wkhtmltopdf-binary (0.12.6.5)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -205,6 +215,7 @@ DEPENDENCIES
   csv
   factory_bot_rails
   jwt
+  letter_opener
   listen (~> 3.2)
   mysql2
   pry-byebug
@@ -215,6 +226,8 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
+  wicked_pdf
+  wkhtmltopdf-binary
 
 RUBY VERSION
    ruby 2.6.3p62
