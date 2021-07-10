@@ -5,8 +5,11 @@ module Processors
     include Processors::Interface
 
     def process!(params:, user:)
-      # TODO: Call job to proceed
-      return :ok
+      ParseLicensesJob.perform_later(
+        file_path: params[:file].path,
+        file_type: params[:file].content_type,
+        user: user
+      )
     end
   end
 end
