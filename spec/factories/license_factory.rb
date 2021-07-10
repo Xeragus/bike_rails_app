@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :license do
     sequence(:license_number) { SecureRandom.uuid }
-    sequence(:name) { |n| "Homer Simpsons #{n}" }
+    sequence(:name) { |n| "Homer Simpson #{n}" }
     date_of_birth { DateTime.now }
     sequence(:email) { |n| "homer#{n}@test.com" }
   end
