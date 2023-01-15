@@ -12,7 +12,7 @@ class CompanyMailer < ApplicationMailer
 
   def nightly_activity_report
     @report = Generators::Reports::NightlyActivity.new.generate!
-    @content = "Attached to this mail you will find all licenses processed last night."
+    @content = 'Attached to this mail you will find all licenses processed last night.'
 
     pdf = Generators::PDF::NightlyActivityReport.new(@report).generate!
     attachments["nightly_activity_report_#{Date.today}.pdf"] = pdf

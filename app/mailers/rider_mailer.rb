@@ -4,7 +4,7 @@ class RiderMailer < ApplicationMailer
   def mail_license
     @license = params[:license]
     @greeting = "Hi #{@license.email}!"
-    @content = "Your license is ready. You can find it attached to this email."
+    @content = 'Your license is ready. You can find it attached to this email.'
 
     pdf = Generators::PDF::License.new(@license).generate!
     attachments["license_#{@license.license_number}.pdf"] = pdf
